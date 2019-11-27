@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Flask Tutorial</title>
-  </head>
-  <body>
-    <h1 style="padding-top: 20px;display: flex;justify-content: center;">Clicked Ads Prediction</h1>
-    <br/>
-    <hr/>
-    <p></p>
-    <form style="padding: 25px">
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="appcode">App code</label>
-          <input type="number" required="required" class="form-control" id="appcode" placeholder="App code">
-        </div>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Clicked Ads Prediction</title>
+</head>
+
+<body>
+  <h1 style="padding-top: 20px;display: flex;justify-content: center;">Clicked Ads Prediction</h1>
+  <br />
+  <hr />
+  <p></p>
+  <form style="padding: 25px" action='/' method="POST">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="appcode">App code</label>
+        <input name = "app_code_count_n" type="number" required="required" class="form-control" id="app_code_count_n" placeholder="App code">
       </div>
-      <div class="form-group">
-        <label for="osversion">Os version</label>
-        <input type="number" required="required" class="form-control" id="osversion" placeholder="1/2/3/4">
-      </div>
-      <div class="form-group">
-          <label for="is4g">is_4G</label>
-          <select id="is4g" class="form-control">
-            <option selected id="yes" value=1>Yes</option>
-            <option id="no" value=0>No</option>
-          </select>
-        </div>
-      <button type="submit" class="btn-lg">Submit</button>
-    </form>
-  </body>
+    </div>
+    <div class="form-group">
+      <label for="osversion">Numbers of ads seen</label>
+      <input name="n_ad_seen" type="number" required="required" class="form-control" id="n_ad_seen">
+    </div>
+    <div class="form-group">
+      <label for="is4g">is_4G</label>
+      <select name = "is_4g" id="is4g" class="form-control">
+        <option selected id="yes" value=1>Yes</option>
+        <option id="no" value=0>No</option>
+      </select>
+    </div>
+    <button type="submit" class="btn-lg">Submit</button>
+  </form>
+</body>
+
 </html>
